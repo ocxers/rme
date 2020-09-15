@@ -1,0 +1,16 @@
+.rme {
+    @each $n, $c, $tc in $colors {
+        &--#{$n} {
+            color: $c;
+        }
+
+        &--bg-#{$n} {
+            color: $tc;
+            background-color: $c;
+        }
+
+        &--bc-#{$n} {
+            border-color: $c!important;
+        }
+    }
+}
