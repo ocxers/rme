@@ -1,0 +1,16 @@
+{
+  "translation": {
+    "WORK_ORDERS": "作業指示書",
+    "NEW_WORK_ORDER": "+ 作業指示書",
+    "REPORTING": "報告書",
+    "REQUESTS": "リクエスト",
+    "ASSETS": "資産",
+    "MESSAGES": "メッセージ",
+    "CATEGORIES": "カテゴリー",
+    "PROCEDURE_LIBRARY": "手続きライブラリ",
+    "LOCATIONS": "場所",
+    "TEAMS_PEOPLE": "ストリーム/人",
+    "VENDORS": "ベンダー",
+    "UPGRADE_TO_PRO": "アップグレード!"
+  }
+}

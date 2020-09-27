@@ -4,6 +4,7 @@ import React from 'react'
 import cx from 'classnames'
 import Routes from '../../routes'
 import utils from '../../utils/utils'
+import i18n from "i18next"
 
 const SideBarNav = (props: any) => {
     let user = utils.getAuthUser()
@@ -32,7 +33,7 @@ const SideBarNav = (props: any) => {
                                         activeClassName={'active'}
                                     >
                                         {/*{prop.icon}*/}
-                                        <p>{prop.name}</p>
+                                        <p>{i18n.t(prop.name)}</p>
                                     </NavLink>
                                 </li>
                             )

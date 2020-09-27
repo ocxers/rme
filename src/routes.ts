@@ -4,14 +4,14 @@ import Profile from "./views/Profile/Profile"
 const routes: any = {
     profile: {
         path: "/profile",
-        name: "Profile",
+        name: "PROFILE",
         // icon: DWOIcons.IconUser(),
         component: Profile,
         layout: "/admin",
     },
     dashboard: {
-        path: "/",
-        name: "Dashboard",
+        path: "/dashboard",
+        name: "DASHBOARD",
         // icon: DWOIcons.IconDashboard(),
         component: Dashboard,
         layout: "/admin",

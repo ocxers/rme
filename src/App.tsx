@@ -1,61 +1,82 @@
-import React from "react";
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link
-} from "react-router-dom"
-import Routes from './routes'
-import SideBarNav from "./components/common/SideNav"
-import Dashboard from "./views/Dashboard/Dashboard"
-import Profile from "./views/Profile/Profile"
+import React from 'react'
+import { useLocation, Route, Switch} from "react-router-dom"
+
+import {AuthUserContext} from './providers/contexts/AuthUserContext'
+import {AuthUserProvider} from './providers'
+import axios from "axios"
+
+import Routes from "./routes"
+import SideBarNav from './components/common/SideNav'
+
+import Home from "./views/Landing/Landing"
+import RMEIndex from './views/RMEGuide'
+import './styles/main.scss'
 import utils from "./utils/utils"
+import _ from 'lodash'
+import Grid from "./views/RMEGuide/Components/Grid"
 
-export default function App() {
-    const user = utils.getAuthUser()
+interface IAppProps {
+    authState?: any
+}
+
+let count = 0
+let signinUser: any
+
+axios.interceptors.request.use((config: any) => {
+    if (signinUser && config.url.indexOf('s3.') <= -1) {
+        config.headers['Authorization'] = 'Bearer ' + signinUser.jwtToken
+    }
+    return config
+}, err => {
+    return err
+})
+
+axios.interceptors.response.use((res: any) => {
+    if (res.config && res.config.loading) {
+        if (--count <= 0) {
+
+        }
+    }
+    return res
+}, err => {
+    return err
+})
+
+const App = (props: IAppProps) => {
+    const location = useLocation()
+
     return (
-        <Router>
-            {/*<Layout/>*/}
-            {/*/!*<Main/>*!/*/}
-            {/*<Media/>*/}
-            {/*<Tag/>*/}
-            {/*<Button/>*/}
-            {/*<Alert/>*/}
-            {/*<Grid/>*/}
-            {/*<Switch>*/}
-            {/*    <Route path="/signin" component={SignIn}></Route>*/}
-            {/*    <Route path="/signup" component={SignUp}></Route>*/}
-            {/*    <Route path="/forget-password"*/}
-            {/*           component={ForgetPassword}></Route>*/}
-            {/*    <Route path="/reset-password"*/}
-            {/*           component={ResetPassword}></Route>*/}
-            {/*    <Route path="/password-recovery-sent"*/}
-            {/*           component={PasswordRecoverySent}></Route>*/}
-            {/*    <Route path="/signup-verify" component={SignUpVerify}></Route>*/}
-            {/*    <Route path="/activate-account" component={AcountActivate}></Route>*/}
-            {/*    <Route path="/signup-success" component={SignUpSuccess}></Route>*/}
-            {/*    {renderRedirect(signinUrl)}*/}
-            {/*</Switch>*/}
-            {/*<SideBarNav/>*/}
-            {/*{renderSwitch('/', {type: 'admin'})}*/}
-            <div>
-                <SideBarNav/>
+        <AuthUserProvider>
+            <AuthUserContext.Consumer>
+                {(authUser: any) => {
+                    if (location.pathname === '/') {
+                        return <Home/>
+                    } else if (_.includes(location.pathname,'/rme')) {
+                        return <RMEIndex/>
+                    } else {
+                        signinUser = authUser || utils.getAuthUser()
 
-                <Switch>
-                    {Routes(user).map((prop, key) => {
-                        console.log(prop)
                         return (
-                            <Route
-                                path={prop.path}
-                                key={key}
-                            >
-                                {prop.component}
-                            </Route>
+                            <>
+                                <SideBarNav/>
+
+                                <Switch>
+                                    {Routes(signinUser).map((prop, key) => {
+                                        return (
+                                            <Route
+                                                path={prop.path}
+                                                key={key}
+                                            />
+                                        )
+                                    })}
+                                </Switch>
+                            </>
                         )
-                    })}
-                    {/*{renderRedirect(reportsUrl)}*/}
-                </Switch>
-            </div>
-        </Router>
+                    }
+                }}
+            </AuthUserContext.Consumer>
+        </AuthUserProvider>
     )
 }
+
+export default App
