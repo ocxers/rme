@@ -7,7 +7,7 @@ import _ from 'lodash'
 
 export default (props: any) => {
     return (
-        <RME fixed p15 fill='60px,,,240px' cn-oy-auto>
+        <RME fixed fill='60px,0,0,240px' cn-oy-auto>
             <Switch>
                 {_.values(RMERoutes).map((prop: any, key: number) => {
                     return (

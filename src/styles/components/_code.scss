@@ -1,0 +1,25 @@
+.code-box {
+    position: relative;
+    overflow: hidden;
+
+    pre {
+        padding: 0 15px!important;
+        margin: 0!important;
+    }
+
+    .link {
+        top: -50px;
+        right: 5px;
+        transition: all .3s;
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
+    }
+
+    &:hover {
+        .link {
+            top: 5px;
+        }
+    }
+}

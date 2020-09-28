@@ -1,6 +1,21 @@
 {
   "translation": {
     "PROFILE": "Profile",
-    "DASHBOARD": "Dashboard"
+    "DASHBOARD": "Dashboard",
+    "COLORS": "Colors",
+    "GRID": "Grid",
+    "ELEMENTS": "Elements",
+    "STYLES": "Styles",
+    "WIDTH": "Width",
+    "HEIGHT": "Height",
+    "PADDING": "Padding",
+    "MARGIN": "Margin",
+    "BORDER": "Border",
+    "COLOR": "Color",
+    "FONTSIZE": "FontSize",
+    "FONTWEIGHT": "FontWeight",
+    "BOXSIZING": "BoxSizing",
+    "BACKGROUNDCOLOR": "Background Color",
+    "BACKGROUNDIMAGE": "Background Image"
   }
 }

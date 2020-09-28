@@ -1,3 +1,39 @@
 .nav {
+  &-items {
+    > li {
+      list-style: none;
 
+      a.nav-link {
+        display: block;
+        padding: 15px;
+        color: $secondary;
+        text-decoration: none;
+        border-right: 2px solid transparent;
+        transition: all .3s;
+
+        &.active, &:hover {
+          color: $primary;
+          border-right-color: rgba($primary, .1);
+          background-color: rgba($primary, .1);
+        }
+
+        &.active {
+          border-right-color: $primary;
+          background-color: rgba($primary, .2);
+        }
+      }
+
+      .sub-items {
+        margin: 0;
+        padding: 0;
+
+        li {
+          list-style: none;
+          a.nav-link {
+            padding-left: 30px;
+          }
+        }
+      }
+    }
+  }
 }

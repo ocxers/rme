@@ -1,7 +1,7 @@
 import {SWITCH_LNG} from "../actions/actionTypes"
 
 const initialState = {
-    lng: 'cn' // i18n language
+    lng: 'en' // i18n language
 }
 
 interface IAction {
