@@ -1,5 +1,4 @@
 import React from 'react'
-import cx from 'classnames'
 import RME from 'react-magic-element'
 import RMERoutes from './routes'
 import {Route, Switch} from "react-router-dom"
@@ -7,7 +6,7 @@ import _ from 'lodash'
 
 export default (props: any) => {
     return (
-        <RME fixed fill='60px,0,0,240px' cn-oy-auto>
+        <RME fixed fill='60px,0,0,240px' cn-oy-auto pb30>
             <Switch>
                 {_.values(RMERoutes).map((prop: any, key: number) => {
                     return (
