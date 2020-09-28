@@ -14,12 +14,12 @@ export default () => {
     return (
         <RME flex center>
             <RME w-90>
-                <RME b-success d-row g32>
+                <RME b-success row g32>
                     <RME xs24 sm16 md12 lg8 xl4 xxl2>
                         <RME bgc-primary>xs24 sm16 md12 lg8 xl4 xxl2</RME>
                     </RME>
                     <RME xs24 rest>
-                        <RME d-row>
+                        <RME row>
                             <RME col12>
                                 <RME bgc-secondary>col12</RME>
                             </RME>
@@ -42,7 +42,7 @@ export default () => {
               <RME bgc-primary>xs24 sm16 md12 lg8 xl4 xxl2</RME>
             </RME>
             <RME xs24 col12>
-              <RME d-row>
+              <RME row>
                 <RME col12>
                   <RME bgc-secondary>col12</RME>
                 </RME>
