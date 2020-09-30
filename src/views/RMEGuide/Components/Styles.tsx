@@ -9,12 +9,15 @@ export default (props: any) => {
   const renderDefault = () => {
     if (location.pathname === '/rme/styles') {
       return (
-        <RME>Styles</RME>
+        <>
+          <RME h1>Styles</RME>
+          <RME p>常用样式的快速写法.</RME>
+        </>
       )
     }
   }
   return (
-    <RME>
+    <RME ph30>
       <Switch>
         {RMERoutes.styles.children.map((prop: any, key: number) => {
           return (

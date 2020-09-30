@@ -1,59 +1,22 @@
 import React from 'react'
 import RME from 'react-magic-element'
-import Code from '../../../components/common/Code'
+import G1 from './Styles/Grids/G1'
+import G2 from './Styles/Grids/G2'
+import G3 from './Styles/Grids/G3'
+import G4 from './Styles/Grids/G4'
+import G5 from './Styles/Grids/G5'
+import G6 from './Styles/Grids/G6'
 
 export default (props: any) => {
   return (
-    <RME ph15>
+    <RME ph30>
       <RME h1>Grid</RME>
-      <RME mb30>
-        <Code code={`
-import RME from 'react-magic-element
-
-export default () => {
-    return (
-        <RME flex center>
-            <RME w-90>
-                <RME b-success row g32>
-                    <RME xs24 sm16 md12 lg8 xl4 xxl2>
-                        <RME bgc-primary>xs24 sm16 md12 lg8 xl4 xxl2</RME>
-                    </RME>
-                    <RME xs24 rest>
-                        <RME row>
-                            <RME col12>
-                                <RME bgc-secondary>col12</RME>
-                            </RME>
-                            <RME rest>
-                                <RME bgc-danger>rest</RME>
-                            </RME>
-                        </RME>
-                    </RME>
-                </RME>
-            </RME>
-        </RME>
-    )
-}
-     `}/>
-      </RME>
-      <RME flex center>
-        <RME w-100 b p15>
-          <RME b-success row g32>
-            <RME xs24 col12>
-              <RME bgc-primary>xs24 sm16 md12 lg8 xl4 xxl2</RME>
-            </RME>
-            <RME xs24 col12>
-              <RME row>
-                <RME col12>
-                  <RME bgc-secondary>col12</RME>
-                </RME>
-                <RME rest>
-                  <RME bgc-danger>rest</RME>
-                </RME>
-              </RME>
-            </RME>
-          </RME>
-        </RME>
-      </RME>
+      <G1 />
+      <G2 />
+      <G3 />
+      <G4 />
+      <G5 />
+      <G6 />
     </RME>
   )
 }

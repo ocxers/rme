@@ -7,7 +7,7 @@ export default (props: any) => {
     console.log(event.target.value)
   }
   return (
-    <RME ph15>
+    <RME ph30>
       <RME h1>Elements</RME>
       <RME mb30>
         <Code url={'https://codesandbox.io/s/friendly-goldwasser-3oux8'}

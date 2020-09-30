@@ -5,11 +5,12 @@ const logo = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcv
 export default (props: any) => {
   return (
     <RME header flex fixed h60 w-100 center className={cx('box-bottom-shadow')}>
-      <RME row ph15 w-100>
-        <RME w30 h30 mr15>
+      <RME a row ph15 w-100 href='/rme'>
+        <RME span w30 h30 mr15>
           <img src={logo} alt=""/>
         </RME>
-        <RME rest fs24 fc='white' fw700>React Magic Element</RME>
+        <RME span fs24 fc='white' fw700>React Magic Element</RME>
+        <RME rest></RME>
       </RME>
     </RME>
   )

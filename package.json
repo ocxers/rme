@@ -1,7 +1,7 @@
 {
   "homepage": "http://ocxers.github.io/rme",
   "name": "rme",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": true,
   "main": "./build/index.js",
   "dependencies": {
@@ -23,7 +23,7 @@
     "node-sass": "^4.14.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-magic-element": "0.0.17",
+    "react-magic-element": "0.0.18",
     "react-redux": "^7.2.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3",
