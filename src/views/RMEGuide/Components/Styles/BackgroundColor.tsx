@@ -1,11 +1,20 @@
 import React from 'react'
-import RME  from 'react-magic-element'
-import Code from '../../../../components/common/Code'
+import RME   from 'react-magic-element'
+import Code  from '../../../../components/common/Code'
 
 export default (props: any) => {
   return (
     <RME>
-      <RME h1 primary>BackgroundColor</RME>
+      <RME h1 primary>Background Color 背景颜色</RME>
+      <RME alert success>背景颜色简写.</RME>
+      <RME h2>如何使用</RME>
+      <RME mb30>
+        <Code code={`
+<RME bg-primary></RME>
+<RME bgc-primary></RME>
+        `} />
+      </RME>
+      <RME h2>代码演示</RME>
       <RME mb30>
         <Code code={`
 <RME h2>bgc: only changes the background color</RME>
@@ -34,7 +43,7 @@ export default (props: any) => {
 <RME mb15 bg-transparent>background-color: transparent</RME>
 <RME mb15 bg-red>background-color: red;</RME>
 <RME mb15 bg={'red'}>background-color: red;</RME>
-        `}/>
+        `} />
       </RME>
       <RME h2>bgc: only changes the background color</RME>
       <RME mb15 bgc-primary>background-color: primary</RME>
