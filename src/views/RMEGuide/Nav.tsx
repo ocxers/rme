@@ -47,7 +47,7 @@ export default (props: any) => {
     })
   }
   return (
-    <RME nav fixed fill='60px,auto,0,0' w240 cn={'br oy-auto nav'}>
+    <RME nav fixed pos='60,,0,0' w240 cn={'br oy-auto nav'}>
       <RME ul cn-nav-items m0 p0>
         {renderComponents()}
       </RME>

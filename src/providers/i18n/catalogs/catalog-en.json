@@ -12,6 +12,7 @@
     "MARGIN": "Margin",
     "BORDER": "Border",
     "COLOR": "Color",
+    "POSITION": "Position",
     "FONTSIZE": "FontSize",
     "FONTWEIGHT": "FontWeight",
     "BOXSIZING": "BoxSizing",

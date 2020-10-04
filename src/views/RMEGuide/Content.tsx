@@ -18,7 +18,7 @@ export default (props: any) => {
     }
   }
   return (
-    <RME fixed fill='60px,0,0,240px' cn-oy-auto pb30>
+    <RME fixed pos='60,0,0,240' cn-oy-auto pb30>
       <Switch>
         {_.values(RMERoutes).map((prop: any, key: number) => {
           return (
