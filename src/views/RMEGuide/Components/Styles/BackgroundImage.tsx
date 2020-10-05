@@ -6,7 +6,7 @@ const img = 'https://is4-ssl.mzstatic.com/image/thumb/Purple113/v4/01/02/b1/0102
 export default (props: any) => {
   return (
     <RME>
-      <RME h1 primary>Background Image 背景图片</RME>
+      <RME h1 primary>Background Image</RME>
       <RME alert success>背景图片简写.</RME>
       <RME h2>如何使用</RME>
       <RME mb30>
