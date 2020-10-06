@@ -8,13 +8,27 @@ export default (props: any) => {
   const renderColorsWithAlerts = () => {
     return _.map(_.keys(colorsConst), (k: string, idx: number) => {
       return (
-        <RME alert {...{[k]:true}} key={idx} mb5 r5>${k}: {colorsConst[k]};</RME>
+        <RME alert {...{ [k]: true }} key={idx} mb5 r5>${k}: {colorsConst[k]};</RME>
       )
     })
   }
   return (
     <RME ph30>
-      <RME h1>Colors</RME>
+      <RME h1 primary>Colors</RME>
+      <RME alert success>React Magic Element的颜色系统.</RME>
+      <RME h2>RME颜色系统</RME>
+      <RME mb15>
+        <RME p15 bg-primary>primary: #007bff;</RME>
+        <RME p15 bg-secondary>secondary: #6c757d;</RME>
+        <RME p15 bg-success>success: #28a745;</RME>
+        <RME p15 bg-danger>danger: #dc3545;</RME>
+        <RME p15 bg-warning>warning: #ffc107;</RME>
+        <RME p15 bg-info>info: #17a2b8;</RME>
+        <RME p15 bg-light>light: #f8f9fa;</RME>
+        <RME p15 bg-dark>dark: #343a40;</RME>
+        <RME p15 bg-white>white: #fff;</RME>
+        <RME p15 bg-transparent>transparent: transparent;</RME>
+      </RME>
       <RME mb15>
         <Code code={`
 $primary:       #007bff;
@@ -27,7 +41,6 @@ $light:         #f8f9fa;
 $dark:          #343a40;
 $white:         #fff;
 $transparent:   transparent;
-$bdColor:       #d9d9d9;
 
 $colors:
 /*  color name      color          text color  */
@@ -41,8 +54,8 @@ $colors:
     dark            $dark          $white;    
     white           $white         $dark;     
     transparent     $transparent   $dark;
-     `}/>
-        <RME h2>Use your own colors</RME>
+     `} />
+        <RME h2>使用自己的颜色</RME>
         <Code code={`
 import RME from 'react-magic-element
 
@@ -50,10 +63,7 @@ RME.config({
     /*         color      text color */ // text color for: tag, and button
     primary: ['#ffcc00', '#ccc']
 })
-      `}/>
-      </RME>
-      <RME>
-        {renderColorsWithAlerts()}
+      `} />
       </RME>
     </RME>
   )

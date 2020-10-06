@@ -7,7 +7,7 @@ export default (props: any) => {
   return (
     <RME>
       <RME h1 primary>Background Image</RME>
-      <RME alert success>背景图片简写.</RME>
+      <RME alert success>CSS中的background-image属性.</RME>
       <RME h2>如何使用</RME>
       <RME mb30>
         <Code code={`
@@ -17,22 +17,10 @@ export default (props: any) => {
       <RME h2>代码演示</RME>
       <RME b-warning r5 p15 mb30>
         <RME row mb15>
-          <RME bgi={img} mr15 mini></RME>
-          <RME bgi={img} mr15 small></RME>
-          <RME bgi={img} mr15 medium></RME>
-          <RME bgi={img} mr15 large></RME>
-          <RME bgi={img} mr15 huge></RME>
-          <RME bgi={img} mr15 box-128></RME>
           <RME bgi={img} mr15 box-128 circle></RME>
         </RME>
         <Code code={`
-<RME bgi={img} mr15 mini></RME>
-<RME bgi={img} mr15 small></RME>
-<RME bgi={img} mr15 medium></RME>
-<RME bgi={img} mr15 large></RME>
-<RME bgi={img} mr15 huge></RME>
-<RME bgi={img} mr15 box-128></RME>
-<RME bgi={img} mr15 box-128 circle></RME>
+<RME bgi={img} mr15 box-128 circle>background-image: url(url)</RME>
         `} />
       </RME>
     </RME>

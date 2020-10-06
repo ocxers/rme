@@ -1,101 +1,27 @@
 import React from 'react'
-import RME  from 'react-magic-element'
+import RME from 'react-magic-element'
 import Code from '../../../../components/common/Code'
+import POS_Numbers from './Positions/POS-Numbers'
+import POS_TRBLNumber from './Positions/POS-TRBLNumber'
+import POS_Values from './Positions/POS-Values'
 
 export default (props: any) => {
   return (
     <RME>
       <RME h1 primary>Position</RME>
+      <RME alert success>CSS中的top, right, bottom, left属性.</RME>
+      <RME h2>如何使用</RME>
       <RME mb30>
         <Code code={`
-<RME b p30 box-h160 row relative mb15>
-  <RME b-primary box-160-120 absolute pos-20>
-    top: 20px; <br/>
-    right: 20px; <br/>
-    bottom: 20px; <br/>
-    left: 20px;
-  </RME>
-</RME>
-<RME b p30 box-h160 row relative mb15>
-  <RME b-secondary box-160-120 absolute pos-20-10>
-    pos-20-10 <br/>
-    top: 20px; <br/>
-    right: 10px; <br/>
-    bottom: 20px; <br/>
-    left: 10px;
-  </RME>
-  <RME b-secondary box-160-120 absolute pos-20-10-30-200>
-    pos-20-10-30-160 <br/>
-    top: 20px; <br/>
-    right: 10px; <br/>
-    bottom: 30px; <br/>
-    left: 200px;
-  </RME>
-</RME>
-<RME b p30 box-h160 row relative mb15>
-  <RME b-success box-160-120 absolute pos-t20-l30>
-    pos-t20-l30 <br/>
-    top: 20px; <br/>
-    left: 30px;
-  </RME>
-</RME>
-<RME b p30 box-h160 row relative mb15>
-  <RME b-success box-160-120 absolute pos={'t20,l30'}>
-    pos={'t20,l30'} <br/>
-    top: 20px; <br/>
-    left: 30px;
-  </RME>
-  <RME b-success box-160-120 absolute pos={'t20 l200'}>
-    pos={'t20 l200'} <br/>
-    top: 20px; <br/>
-    left: 200px;
-  </RME>
-</RME>
-     `}/>
+<RME pos-[top number]-[right number]-[bottom number]-[left number]></RME>
+<RME pos[-t+number][-r+number][-b+number][-l+number][-h+number][-v+number]></RME>
+<RME pos={value}></RME>
+        `} />
       </RME>
-      <RME b p30 box-h160 row relative mb15>
-        <RME b-primary box-160-120 absolute pos-20>
-          top: 20px; <br/>
-          right: 20px; <br/>
-          bottom: 20px; <br/>
-          left: 20px;
-        </RME>
-      </RME>
-      <RME b p30 box-h160 row relative mb15>
-        <RME b-secondary box-160-120 absolute pos-20-10>
-          pos-20-10 <br/>
-          top: 20px; <br/>
-          right: 10px; <br/>
-          bottom: 20px; <br/>
-          left: 10px;
-        </RME>
-        <RME b-secondary box-160-120 absolute pos-20-10-30-200>
-          pos-20-10-30-160 <br/>
-          top: 20px; <br/>
-          right: 10px; <br/>
-          bottom: 30px; <br/>
-          left: 200px;
-        </RME>
-      </RME>
-      <RME b p30 box-h160 row relative mb15>
-        <RME b-success box-160-120 absolute pos-t20-l30>
-          pos-t20-l30 <br/>
-          top: 20px; <br/>
-          left: 30px;
-        </RME>
-      </RME>
-      <RME b p30 box-h160 row relative mb15>
-        <RME b-success box-160-120 absolute pos={'t20,l30'}>
-          pos={'t20,l30'} <br/>
-          top: 20px; <br/>
-          left: 30px;
-        </RME>
-        <RME b-success box-160-120 absolute pos={'t20 l200'}>
-          pos={'t20 l200'} <br/>
-          top: 20px; <br/>
-          left: 200px;
-        </RME>
-      </RME>
+      <RME h2>代码演示</RME>
+      <POS_Numbers />
+      <POS_TRBLNumber />
+      <POS_Values />
     </RME>
   )
 }

@@ -15,7 +15,7 @@ export default (props: any) => {
   }
   return (
     <RME relative cn-code-box r5>
-      <SyntaxHighlighter language={'tsx'} style={docco}>
+      <SyntaxHighlighter language={'html'} style={docco}>
         {props.code}
       </SyntaxHighlighter>
       {renderCodeSandbox()}

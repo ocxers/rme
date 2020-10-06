@@ -1,65 +1,36 @@
 import React from 'react'
-import RME  from 'react-magic-element'
+import RME from 'react-magic-element'
 import Code from '../../../../components/common/Code'
+import Preset from './BoxSizings/Preset'
+import BoxNumber from './BoxSizings/BoxNumber'
+import Box_Number from './BoxSizings/Box-Number'
+import Box_Numbers from './BoxSizings/Box-Numbers'
+import Box_WHNumbers from './BoxSizings/Box-WHNumbers'
+import Box_Values from './BoxSizings/Box-Values'
 
 export default (props: any) => {
   return (
     <RME>
       <RME h1 primary>BoxSizing</RME>
+      <RME alert success>CSS中的width, height属性.</RME>
+      <RME h2>如何使用</RME>
       <RME mb30>
         <Code code={`
-<RME h2 primary>Builtin BoxSizing:</RME>
-<RME b row p30 mb15>
-  <RME col2><RME b-primary mini></RME>mini: 16px x 16px.</RME>
-  <RME col2><RME b-secondary small></RME>small: 24px x 24px.</RME>
-  <RME col3><RME b-success medium></RME>medium: 32px x 32px.</RME>
-  <RME col3><RME b-danger big></RME>big: 48px x 48px.</RME>
-  <RME col4><RME b-warning large></RME>large: 64px x 64px.</RME>
-  <RME col4><RME b-info huge></RME>huge:96px x 96px.</RME>
-</RME>
-<RME h2 primary>Width Height</RME>
-<RME b p30 row mb15>
-  <RME mb15 w-33><RME b-dark w160 h120></RME>width: 160px; height: 120px</RME>
-  <RME mb15 w-33><RME b-dark w={160} h={120}></RME>width: 160px; height: 120px</RME>
-</RME>
-<RME h2 primary>Box</RME>
-<RME b p30 row mb15>
-  <RME mb15 w-25><RME b-primary box-128>box-128</RME>width: 128px; height: 128px</RME>
-  <RME mb15 w-25><RME b-secondary box-128-64>box-128-64</RME>width: 128px; height: 64px</RME>
-  <RME mb15 w-25><RME b-success box-h128-w64>box-h128-w64</RME>width: 64px; height: 128px</RME>
-  <RME mb15 w-25><RME b-danger box={'128'}>box={'128'}</RME>width: 128px; height: 128px</RME>
-  <RME mb15 w-25><RME b-warning box={'128,64'}>box={'128,64'}</RME>width: 128px; height: 64px</RME>
-  <RME mb15 w-25><RME b-info box={'128 64'}>box={'128 64'}</RME>width: 128px; height: 64px</RME>
-  <RME mb15 w-25><RME b-primary box={'w128 h64'}>box={'w128 h64'}</RME>width: 128px; height: 64px</RME>
-  <RME mb15 w-25><RME b-secondary box={'h128 w64'}>box={'h128 w64'}</RME>width: 64px; height: 128px</RME>
-</RME>
-     `}/>
+<RME [preset]></RME>
+<RME boxnumber></RME>
+<RME box-number></RME>
+<RME box-[width number]-[height number]></RME>
+<RME box[-w+number][-h+number]></RME>
+<RME box={value}></RME>
+        `} />
       </RME>
-      <RME h2 primary>Builtin BoxSizing:</RME>
-      <RME b row p30 mb15>
-        <RME col2><RME b-primary mini></RME>mini: 16px x 16px.</RME>
-        <RME col2><RME b-secondary small></RME>small: 24px x 24px.</RME>
-        <RME col3><RME b-success medium></RME>medium: 32px x 32px.</RME>
-        <RME col3><RME b-danger big></RME>big: 48px x 48px.</RME>
-        <RME col4><RME b-warning large></RME>large: 64px x 64px.</RME>
-        <RME col4><RME b-info huge></RME>huge:96px x 96px.</RME>
-      </RME>
-      <RME h2 primary>Width Height</RME>
-      <RME b p30 row mb15>
-        <RME mb15 w-33><RME b-dark w160 h120></RME>width: 160px; height: 120px</RME>
-        <RME mb15 w-33><RME b-dark w={160} h={120}></RME>width: 160px; height: 120px</RME>
-      </RME>
-      <RME h2 primary>Box</RME>
-      <RME b p30 row mb15>
-        <RME mb15 w-25><RME b-primary box-128>box-128</RME>width: 128px; height: 128px</RME>
-        <RME mb15 w-25><RME b-secondary box-128-64>box-128-64</RME>width: 128px; height: 64px</RME>
-        <RME mb15 w-25><RME b-success box-h128-w64>box-h128-w64</RME>width: 64px; height: 128px</RME>
-        <RME mb15 w-25><RME b-danger box={'128'}>box={'128'}</RME>width: 128px; height: 128px</RME>
-        <RME mb15 w-25><RME b-warning box={'128,64'}>box={'128,64'}</RME>width: 128px; height: 64px</RME>
-        <RME mb15 w-25><RME b-info box={'128 64'}>box={'128 64'}</RME>width: 128px; height: 64px</RME>
-        <RME mb15 w-25><RME b-primary box={'w128 h64'}>box={'w128 h64'}</RME>width: 128px; height: 64px</RME>
-        <RME mb15 w-25><RME b-secondary box={'h128 w64'}>box={'h128 w64'}</RME>width: 64px; height: 128px</RME>
-      </RME>
+      <RME h2>代码演示</RME>
+      <Preset />
+      <BoxNumber/>
+      <Box_Number/>
+      <Box_Numbers />
+      <Box_WHNumbers />
+      <Box_Values />
     </RME>
   )
 }

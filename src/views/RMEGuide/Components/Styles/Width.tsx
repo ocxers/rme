@@ -5,7 +5,7 @@ import Code from '../../../../components/common/Code'
 export default (props: any) => {
   return (
     <RME>
-      <RME h1>Width</RME>
+      <RME h1 primary>Width</RME>
       <RME alert success>CSS中的width属性.</RME>
       <RME h2>如何使用</RME>
       <RME mb30>
