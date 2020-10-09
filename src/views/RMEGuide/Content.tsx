@@ -4,6 +4,7 @@ import RME from 'react-magic-element'
 import RMERoutes from './routes'
 import { Route, Switch } from 'react-router-dom'
 import _ from 'lodash'
+import Code from '../../components/common/Code'
 
 export default (props: any) => {
   const location = useLocation()
@@ -80,6 +81,30 @@ export default (props: any) => {
       return (
         <RME ph30>
           <RME h1>Welcome to RME!</RME>
+          <RME p>旨在提高react开发效率. 以`props`的方式来书写`className`和`style`. 以`<RME a href={'/rme/styles/padding'}>padding</RME>`为例, 如:</RME>
+          <RME h2>如何使用</RME>
+          <RME mb30>
+            <Code code={`
+<RME p[t|r|b|l|h|v]number></RME>
+<RME p[t|r|b|l|h|v]-number></RME>
+<RME p-[top number]-[right number]-[bottom number]-[left number]></RME>
+<RME p[-t+number][-r+number][-b+number][-l+number][-h+number][-v+number]></RME>
+<RME p[t|r|b|l|h|v]={value}></RME>
+        `} />
+          </RME>
+          <RME mb30>
+            <RME label={'p15'} labelWidth={120}>-> className: rme--p15, 效果: padding: 15px;</RME>
+            <RME label={'pt15'} labelWidth={120}>-> className: rme--pt15, 效果: padding-top: 15px;</RME>
+            <RME label={'p-16-12-8-4'} labelWidth={120}>-> style: padding: 16px 12px 8px 4px;</RME>
+            <RME label={'p-16---4'} labelWidth={120}>-> style: padding-top: 16px; padding-left: 4px;</RME>
+            <RME label={'p-t16-l4'} labelWidth={120}>-> style: padding-top: 16px; padding-left: 4px;</RME>
+            <RME label={'p-h16-v4'} labelWidth={120}>-> style: padding: 4px 16px;</RME>
+            <RME label={'p="16 12 8 4"'} labelWidth={120}>-> style: padding: 16px 12px 8px 4px;</RME>
+            <RME label={'p="16,12,8,4"'} labelWidth={120}>-> style: padding: 16px 12px 8px 4px;</RME>
+            <RME label={'p="16,,,4"'} labelWidth={120}>-> style: padding-top: 16px; padding-left: 4px;</RME>
+            <RME label={'p="t16,l4"'} labelWidth={120}>-> style: padding-top: 16px; padding-left: 4px;</RME>
+            <RME label={'p=h16,v4'} labelWidth={120}>-> style: padding: 4px 16px;</RME>
+          </RME>
           {/*<RME mb30>It's a personal small library to speed up a little.</RME>*/}
           <RME center txt-center mb30>
             <RME row mb30>
