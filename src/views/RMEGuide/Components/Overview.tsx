@@ -109,7 +109,7 @@ export default (props: any) => {
               <Code inline code={'b'} />
             </RME>
             <RME rest>
-              rme--mb30: margin-bottom: 30px;
+              rme--b: border: 1px solid;
             </RME>
           </RME>
           <RME row mb5>
@@ -117,7 +117,7 @@ export default (props: any) => {
               <Code inline code={'bhw14'} />
             </RME>
             <RME rest>
-              rme--p15: padding: 15px;
+              border-right-width: 14px; border-left-width: 14px;
             </RME>
           </RME>
           <RME row mb5>
@@ -125,7 +125,7 @@ export default (props: any) => {
               <Code inline code={'bvw35'} />
             </RME>
             <RME rest>
-              rme--b: border: 1px solid;
+              border-top-width: 14px; border-bottom-width: 14px;
             </RME>
           </RME>
           <RME row mb5>
@@ -133,7 +133,7 @@ export default (props: any) => {
               <Code inline code={'bs-double'} />
             </RME>
             <RME rest>
-              border-right-width: 14px; border-left-width: 14px;
+              rme--bs-double: border-style: double;
             </RME>
           </RME>
           <RME row mb5>
@@ -143,7 +143,7 @@ export default (props: any) => {
               </Code>
             </RME>
             <RME rest>
-              border-top-width: 14px; border-bottom-width: 14px;
+              border-color: #08979c #096dd9 #531dab #c41d7f;
             </RME>
           </RME>
           <RME row mb5>
@@ -151,7 +151,7 @@ export default (props: any) => {
               <Code inline code={'r-60'} />
             </RME>
             <RME rest>
-              rme--bs-double: border-style: double;
+              border-radius: 60%;
             </RME>
           </RME>
         </RME>
