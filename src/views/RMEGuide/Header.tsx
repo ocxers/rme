@@ -13,7 +13,11 @@ export default (props: any) => {
           </RME>
           <RME span fs24 fc='white' fw700>React Magic Element</RME>
         </RME>
-        <RME rest></RME>
+        <RME rest>
+          <RME txt-right>
+            <a className="github-button" href="https://github.com/ocxers/react-magic-element" data-size="large" data-show-count="true" aria-label="Star ocxers/react-magic-element on GitHub"></a>
+          </RME>
+        </RME>
       </RME>
     </RME>
   )

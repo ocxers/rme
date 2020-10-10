@@ -1,20 +1,34 @@
-import Colors          from './Components/Colors'
-import Grid            from './Components/Grid'
-import Elements        from './Components/Elements'
-import Styles          from './Components/Styles'
-import Width           from './Components/Styles/Width'
-import Height          from './Components/Styles/Height'
-import Padding         from './Components/Styles/Padding'
-import Margin          from './Components/Styles/Margin'
-import Border          from './Components/Styles/Border'
-import Position        from './Components/Styles/Position'
-import FontSize        from './Components/Styles/FontSize'
-import FontWeight      from './Components/Styles/FontWeight'
-import BoxSizing       from './Components/Styles/BoxSizing'
+import Colors from './Components/Colors'
+import Overview from './Components/Overview'
+import GettingStarted from './Components/Getting-Started'
+import Grid from './Components/Grid'
+import Elements from './Components/Elements'
+import Styles from './Components/Styles'
+import Width from './Components/Styles/Width'
+import Height from './Components/Styles/Height'
+import Padding from './Components/Styles/Padding'
+import Margin from './Components/Styles/Margin'
+import Border from './Components/Styles/Border'
+import Position from './Components/Styles/Position'
+import FontSize from './Components/Styles/FontSize'
+import FontWeight from './Components/Styles/FontWeight'
+import BoxSizing from './Components/Styles/BoxSizing'
 import BackgroundColor from './Components/Styles/BackgroundColor'
 import BackgroundImage from './Components/Styles/BackgroundImage'
 
 const routes: any = {
+  gettingstarted: {
+    path: '/getting-started',
+    name: 'GETTINGSTARTED',
+    component: GettingStarted,
+    layout: '/rme'
+  },
+  overview: {
+    path: '/overview',
+    name: 'OVERVIEW',
+    component: Overview,
+    layout: '/rme'
+  },
   colors: {
     path: '/colors',
     name: 'COLORS',

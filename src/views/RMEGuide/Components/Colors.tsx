@@ -15,8 +15,8 @@ export default (props: any) => {
   return (
     <RME ph30>
       <RME h1 primary>Colors</RME>
-      <RME alert success>React Magic Element的颜色系统.</RME>
-      <RME h2>RME颜色系统</RME>
+      <RME alert success>React Magic Element color system.</RME>
+      <RME h2>RME color system</RME>
       <RME mb15>
         <RME p15 bg-primary>primary: #007bff;</RME>
         <RME p15 bg-secondary>secondary: #6c757d;</RME>
@@ -55,7 +55,7 @@ $colors:
     white           $white         $dark;     
     transparent     $transparent   $dark;
      `} />
-        <RME h2>使用自己的颜色</RME>
+        <RME h2>Use your own colors</RME>
         <Code code={`
 import RME from 'react-magic-element
 

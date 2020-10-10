@@ -22,4 +22,13 @@
             top: 5px;
         }
     }
+
+    &.inline {
+        margin-left: 5px;
+        margin-right: 5px;
+        display: inline-flex;
+        pre {
+            padding: 3px 5px!important;
+        }
+    }
 }

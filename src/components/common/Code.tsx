@@ -4,6 +4,7 @@ import SyntaxHighlighter from 'react-syntax-highlighter'
 import { docco } from 'react-syntax-highlighter/dist/esm/styles/hljs'
 
 export default (props: any) => {
+  const { inline, language, code, children } = props
   const renderCodeSandbox = () => {
     if (props.url) {
       return (
@@ -14,9 +15,9 @@ export default (props: any) => {
     }
   }
   return (
-    <RME relative cn-code-box r5>
-      <SyntaxHighlighter language={'html'} style={docco}>
-        {props.code}
+    <RME relative cn-code-box r5 cn={inline ? 'inline' : ''}>
+      <SyntaxHighlighter language={language || 'html'} style={docco}>
+        {code || children}
       </SyntaxHighlighter>
       {renderCodeSandbox()}
     </RME>
