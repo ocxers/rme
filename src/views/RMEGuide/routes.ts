@@ -1,6 +1,7 @@
 import Colors from './Components/Colors'
 import Overview from './Components/Overview'
 import GettingStarted from './Components/Getting-Started'
+import CSSClasses from './Components/CSS-Classes'
 import Grid from './Components/Grid'
 import Elements from './Components/Elements'
 import Styles from './Components/Styles'
@@ -29,6 +30,12 @@ const routes: any = {
     component: Overview,
     layout: '/rme'
   },
+  cssclasses: {
+    path: '/css-classes',
+    name: 'CSSCLASSES',
+    component: CSSClasses,
+    layout: '/rme'
+  },
   colors: {
     path: '/colors',
     name: 'COLORS',
@@ -38,7 +45,6 @@ const routes: any = {
   grid: {
     path: '/grid',
     name: 'GRID',
-    // icon: DWOIcons.IconDashboard(),
     component: Grid,
     layout: '/rme'
   },

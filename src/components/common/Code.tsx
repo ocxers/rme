@@ -2,6 +2,7 @@ import React from 'react'
 import RME from 'react-magic-element'
 import SyntaxHighlighter from 'react-syntax-highlighter'
 import { docco } from 'react-syntax-highlighter/dist/esm/styles/hljs'
+// import { dark } from 'react-syntax-highlighter/dist/esm/styles/prism'
 
 export default (props: any) => {
   const { inline, language, code, children } = props
@@ -16,9 +17,9 @@ export default (props: any) => {
   }
   return (
     <RME relative cn-code-box r5 cn={inline ? 'inline' : ''}>
-      <SyntaxHighlighter language={language || 'html'} style={docco}>
-        {code || children}
-      </SyntaxHighlighter>
+      <SyntaxHighlighter style={docco}
+                         wrapLines={true}
+                         language={language || 'html'}>{code || children}</SyntaxHighlighter>
       {renderCodeSandbox()}
     </RME>
   )
